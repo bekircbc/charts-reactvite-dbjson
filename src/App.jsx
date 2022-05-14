@@ -5,9 +5,12 @@ import db from "./data/db.json";
 
 export const App = () => {
   const [chart, setChart] = useState({});
-  const [type, setType] = useState("radar");
+  const [type, setType] = useState("bar");
 
   useEffect(() => {
+    const chartData = db.filter((m) => m.type === type);
+    setChart(chartData);
+
     // if (
     //   type === "bar" ||
     //   type === "line" ||
@@ -15,7 +18,7 @@ export const App = () => {
     //   type === "area" ||
     //   type === "heatmap"
     // ) {
-    setChart(db.apexcharts.filter((m) => m.type === type));
+
     // } else if (
     //   type === "donut" ||
     //   type === "histogram" ||
@@ -49,7 +52,13 @@ export const App = () => {
         <button onClick={() => setType("line")}>Line</button>
       </nav>
 
-      <Chart chart={chart} />
+      <Chart
+        series={chart.series}
+        options={chart.chart}
+        type={chart.type} //"bar","line", "donut","area", "radar", "histogram", "pie", "radialBar", scatter, bubble, heatmap, candlestick
+        width={800}
+        height={520}
+      />
     </div>
   );
 };

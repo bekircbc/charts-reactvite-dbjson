@@ -1,50 +1,44 @@
-{
-  "apexcharts": [
-    {
-      "series": [
-        {
-          "name": "series-1",
-          "data": [30, 40, 35, 50, 49, 60, 70, 91, 125, 30, 45, 65]
-        },
-        {
-          "name": "series-2",
-          "data": [20, 30, 55, 75, 63, 60, 80, 134, 110, 40, 55, 64]
-        }
-      ],
-      "type": "bar",
-      "height": 300,
-      "width": 400,
-      "chart": {
-        "id": "apexchart-example",
-        "stacked": true,
-        "background": "#f1f7fd"
+[
+  {
+    "series": [
+      {
+        "name": "series-1",
+        "data": [30, 40, 35, 50, 49, 60, 70, 91, 125, 30, 45, 65]
       },
+      {
+        "name": "series-2",
+        "data": [20, 30, 55, 75, 63, 60, 80, 134, 110, 40, 55, 64]
+      }
+    ],
+    "type": "bar",
+    "height": 300,
+    "width": 400,
+    "chart": {
+      "stacked": true,
+      "background": "#f1f7fd",
       "xaxis": {
         "categories": [
           2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
         ]
       }
     },
-    {
-      "series": [14, 23, 21, 17, 15, 10, 12, 17, 21],
-      "type": "polarArea",
-      "height": 300,
-      "width": 400,
-      "options": {
-        "responsive": [
-          {
-            "breakpoint": 480,
-            "options": {
-              "chart": {
-                "width": 200
-              },
-              "legend": {
-                "position": "bottom"
-              }
-            }
+    "id": "BarChart"
+  },
+  {
+    "series": [14, 23, 21, 17, 15, 10, 12, 17, 21],
+    "type": "polarArea",
+    "height": 300,
+    "width": 400,
+    "chart": {
+      "responsive": [
+        {
+          "breakpoint": 480,
+          "legend": {
+            "position": "bottom"
           }
-        ]
-      }
-    }
-  ]
-}
+        }
+      ]
+    },
+    "id": "PolarAreaChart"
+  }
+]
